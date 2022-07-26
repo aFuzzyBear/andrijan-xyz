@@ -1,0 +1,30 @@
+{
+  "name": "garemotion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrijantasevski/garemotion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrijantasevski/garemotion/issues"
+  },
+  "homepage": "https://github.com/andrijantasevski/garemotion#readme",
+  "dependencies": {
+    "astro": "^1.0.0-beta.72"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^0.2.4",
+    "sass": "^1.53.0"
+  }
+}
