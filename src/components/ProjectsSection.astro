@@ -7,7 +7,7 @@
         <h2 class="text-4xl font-semibold mb-7">Projects</h2>
 
         <div class="flex flex-col gap-y-8 md:grid md:grid-cols-2 gap-x-8">
-            <div class="bg-gray-100 rounded-md p-6">
+            <div class="project-card bg-gray-100 rounded-md p-6">
                 <a href=""><h3 class="text-2xl font-medium">Garemotion</h3></a>
                 <p class="mb-5">Astro · Tailwind · Netlify CMS</p>
                 <a href="#"><img class="rounded-lg mb-5" src="/garemotion.png" alt="Garemotion Website"></a>
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="bg-gray-100 rounded-md p-6">
+            <div class="project-card bg-gray-100 rounded-md p-6">
                 <a href=""><h3 class="text-2xl font-medium">Garemotion</h3></a>
                 <p class="mb-5">Astro · Tailwind · Netlify CMS</p>
                 <a href="#"><img class="rounded-lg mb-5" src="/garemotion.png" alt="Garemotion Website"></a>
@@ -31,3 +31,9 @@
         </div>
     </div>
 </section>
+
+<style lang="scss">
+    .project-card {
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
