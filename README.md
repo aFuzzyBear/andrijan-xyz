@@ -2,7 +2,7 @@
 
 ## To-do list
 
-- [ ] Favicon
-- [ ] Header & Navbar
+- [x] Favicon
+- [x] Header & Navbar
 - [ ] First section
 - [ ] Footer
