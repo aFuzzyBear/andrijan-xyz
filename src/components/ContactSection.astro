@@ -1,0 +1,57 @@
+---
+
+---
+
+<section class="py-4">
+    <div class="w-11/12 mx-auto">
+        <h2 class="text-4xl font-semibold mb-7">Contact me</h2>
+
+        <form class="md:w-6/12" novalidate netlify data-netlify="true" netlify-honeypot name="feedback" method="POST">
+            <div class="mb-3" id="name-input-wrapper">
+                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="text" placeholder="Your name" id="name-input" name="name">
+
+                <p class="hidden text-md text-red-400 mt-2" id="name-input-error">Enter your name, please.</p>
+            </div>
+
+            <div class="mb-3" id="email-input-wrapper">
+                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="email" placeholder="Your email" id="email-input" name="email">
+                <p class="hidden text-md text-red-400 mt-2" id="email-input-error">Enter your email, please.</p>
+            </div>
+
+            <div class="mb-3" id="message-input-wrapper">
+                <textarea class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" rows="5" placeholder="Your message" id="message-input" name="message"></textarea>
+                <p class="hidden text-md text-red-400 mt-2" id="message-input-error">Enter a message, please.</p>
+            </div>
+
+            <div class="flex justify-end">
+                <button type="submit" class="text-lg py-2 px-4 border-0 bg-gray-100 rounded-lg focus:ring-gray-900" id="form-submit-button">Submit</button>
+            </div>
+
+            <input type="hidden" name="form-name" value="Email" />
+        </form>
+
+        <p class="hidden">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+          </p>
+    </div>
+</section>
+
+<style lang="scss">
+    .form-input {
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-input.error {
+        @apply ring-1 ring-red-400;
+    }
+
+    .form-input.success {
+        @apply ring-0;
+    }
+
+    .form-input.success:focus {
+        @apply ring-1 ring-gray-900;
+    }
+</style>
