@@ -8,18 +8,18 @@
 
         <form class="md:w-6/12" novalidate netlify data-netlify="true" netlify-honeypot name="feedback" method="POST">
             <div class="mb-3" id="name-input-wrapper">
-                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="text" placeholder="Your name" id="name-input">
+                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="text" placeholder="Your name" id="name-input" name="name">
 
                 <p class="hidden text-md text-red-400 mt-2" id="name-input-error">Enter your name, please.</p>
             </div>
 
             <div class="mb-3" id="email-input-wrapper">
-                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="email" placeholder="Your email" id="email-input">
+                <input class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" type="email" placeholder="Your email" id="email-input" name="email">
                 <p class="hidden text-md text-red-400 mt-2" id="email-input-error">Enter your email, please.</p>
             </div>
 
             <div class="mb-3" id="message-input-wrapper">
-                <textarea class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" rows="5" placeholder="Your message" id="message-input"></textarea>
+                <textarea class="form-input text-lg border-0 bg-gray-100 rounded-lg focus:ring-gray-900 w-full" rows="5" placeholder="Your message" id="message-input" name="message"></textarea>
                 <p class="hidden text-md text-red-400 mt-2" id="message-input-error">Enter a message, please.</p>
             </div>
 
