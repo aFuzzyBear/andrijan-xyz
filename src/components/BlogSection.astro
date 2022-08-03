@@ -1,5 +1,7 @@
 ---
+const posts = await Astro.glob("../blog/posts/*.md");
 
+import BlogCard from "./BlogCard.astro";
 ---
 
 <section class="py-4">

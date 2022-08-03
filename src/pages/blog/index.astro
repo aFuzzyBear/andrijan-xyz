@@ -1,0 +1,13 @@
+---
+const posts = await Astro.glob("../blog/posts/*.md");
+
+import BlogCard from "../../components/BlogCard.astro";
+---
+
+<div>
+    {
+        posts.map(post => (
+             <BlogCard blogTitle={post.frontmatter.title} blogDate={post.frontmatter.date} />
+        ))
+    }
+</div>
