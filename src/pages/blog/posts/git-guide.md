@@ -36,14 +36,14 @@ We will also assume that we have a sudo user set up on our system.
 
 #### Fetching updates and installing them
 
-```
+```bash
 $ sudo apt update
 $ sudo apt upgrade
 ```
 
 #### Installing git
 
-```
+```bash
 $ sudo add-apt-repository ppa:git-core/ppa
 $ sudo apt update
 $ sudo apt install git
@@ -51,7 +51,7 @@ $ sudo apt install git
 
 #### Checking the installed version of git
 
-```
+```bash
 $ git --version
 ```
 
@@ -63,7 +63,7 @@ In order to connect properly to a remote service (GitHub, GitLab, BitBucket) to 
 
 To set up our name and e-mail in git, we run the following commands:
 
-```
+```bash
 git config --global user.name "name-and-lastname"
 
 git config --global user.email "email"
@@ -71,7 +71,7 @@ git config --global user.email "email"
 
 Now with actual information:
 
-```
+```bash
 // Add our name
 
 $ git config --global user.name "Andrijan Tasevski"
@@ -89,7 +89,7 @@ When we work on new projects, we always need to use main as our default branch a
 
 To change the name of our default branch from master to main **globally**, we run the following command:
 
-```
+```bash
 $ git config --global init.defaultBranch main
 ```
 
@@ -101,7 +101,7 @@ If we are working on an older project that still uses master as our branch, we c
 
 Now with actual data:
 
-```
+```bash
 // Rename branch main to master
 
 $ git branch -m master
@@ -115,7 +115,7 @@ _[Switching between branches](#switching-between-branches)_
 
 To review the git output in a terminal in an easier way, we can set up automatic coloring:
 
-```
+```bash
 $ git config --global color.ui auto
 ```
 
@@ -145,7 +145,7 @@ To make a local repo, we need to make a directory on our machine and initialize 
 
 We write the following commands to initialize a repo:
 
-```
+```bash
 // Check the current working directory
 
 $ pwd
@@ -167,13 +167,13 @@ $ git init
 
 To connect our local repo to a remote one, we have to use **git remote add** command and specify the https/ssh path provided to us by our provider (GitHub, GitLab, BitBucket):
 
-```
+```bash
 $ git remote add origin
 ```
 
 To check that we have successfully added our origin, we use the following command:
 
-```
+```bash
 $ git remote -v
 ```
 
@@ -187,7 +187,7 @@ _The alias can be named anything we want, but it is better to name it origin as 
 
 To clone a remote repository that is hosted on a service like GitHub, GitLab, BitBucket, we can run one of the following commands depending on your workflow (we assume that we are using SSH in this guide):
 
-```
+```bash
 // Using HTTPS
 
 git clone
@@ -201,7 +201,7 @@ git clone
 
 To check the status/state of the modified files in our repo, we run the following command:
 
-```
+```bash
 $ git status
 ```
 
@@ -215,7 +215,7 @@ To add files and the changes we have made to them to the staging area, we can ru
 
 Now with real data:
 
-```
+```bash
 // Add only index.html to staging area
 
 $ git add index.html
@@ -238,7 +238,7 @@ As we can see, the commit command can take two flags:
 
 Now with real data:
 
-```
+```bash
 $ git commit -m "Initial commit" -m "Added basic folder structure"
 ```
 
@@ -252,13 +252,13 @@ To push the changes we have committed to a remote repository (GitHub, GitLab), w
 
 Now with actual data:
 
-```
+```bash
 $ git push origin main
 ```
 
 If the branch that we are on has been created locally and has not been pushed to remote, we must use the flag -u to connect them:
 
-```
+```bash
 $ git push -u origin main
 ```
 
@@ -270,7 +270,7 @@ _In the example, we are using main as the branch we are pushing our changes to. 
 
 If we want to check the history of all the commits we have made in the branch that we are currently in, we run the following command:
 
-```
+```bash
 $ git log
 ```
 
@@ -280,7 +280,7 @@ $ git log
 
 To see all the branches we have in our **local** git repo, we run the following command:
 
-```
+```bash
 // List the local branches
 
 $ git branch
@@ -290,7 +290,7 @@ $ git branch
 
 To see the local branches and others that may be on a remote repository, but we haven't yet pulled to our local repo, we add **the flag --all**:
 
-```
+```bash
 // List all the local and remote branches
 
 $ git branch --all
@@ -304,7 +304,7 @@ _This could be especially helpful when we clone a remote repository, as we will 
 
 To make a new branch, we use the following command:
 
-```
+```bash
 $ git branch example-branch
 ```
 
@@ -312,7 +312,7 @@ $ git branch example-branch
 
 To make a new branch and switch to it immediately after creating it, we can use the following command:
 
-```
+```bash
 $ git checkout -b example-branch
 ```
 
@@ -322,7 +322,7 @@ $ git checkout -b example-branch
 
 To switch between the different branches on our repo, we run the following command:
 
-```
+```bash
 // If we are currently on main and want to switch to example-branch
 
 $ git checkout example-branch
@@ -336,7 +336,7 @@ To merge a branch into the branch we are on (the current branch), we run the fol
 
 Now with actual data:
 
-```
+```bash
 // Switch to main branch, if we are not on it
 
 $ git checkout main
@@ -352,7 +352,7 @@ $ git merge example-branch
 
 To remove a **local branch** in our repo, we run the following command:
 
-```
+```bash
 $ git branch -d example-branch
 ```
 
@@ -360,7 +360,7 @@ $ git branch -d example-branch
 
 To **force delete** a branch, we run the following command:
 
-```
+```bash
 $ git branch -D example-branch
 ```
 
@@ -368,7 +368,7 @@ $ git branch -D example-branch
 
 Although it may appear unusual at first, when we want to delete a remote branch, we have to push the changes to remote with the flag --delete:
 
-```
+```bash
 $ git push --delete remote example-branch
 ```
 
@@ -386,7 +386,7 @@ Before we do fetch or pull, we need to be able to differentiate between the two 
 
 To fetch all the remote branches, we run the following command:
 
-```
+```bash
 $ git fetch origin
 ```
 
@@ -396,7 +396,7 @@ $ git fetch origin
 
 To pull all the commits (changes to files) from remote, we run the following command:
 
-```
+```bash
 $ git pull origin main
 ```
 
@@ -406,19 +406,19 @@ $ git pull origin main
 
 First, to be sure that you are up to date with the newest changes from remote fetch the branches and meta-data:
 
-```
+```bash
 $ git fetch remote
 ```
 
 Then, list both the local and remote branches with the **--all flag**:
 
-```
+```bash
 $ git branch --all
 ```
 
 Switch to the desired branch (branch and files in it will be automatically pulled from remote):
 
-```
+```bash
 // Template
 
 $ git checkout [branch-to-switch-to]
@@ -430,7 +430,7 @@ $ git checkout example-branch
 
 #### 2. I have tried pulling commits from remote, but git is not allowing me to because of the commits having unrelated histories. What should I do?
 
-```
+```bash
 // If your default branch is master
 
 $ git pull origin master --allow-unrelated-histories
@@ -444,7 +444,7 @@ $ git pull origin main --allow-unrelated-histories
 
 If the branch is only on our local repo and not on remote, we may sometimes need to use the **--set-upstream** or **-u** (for short) flag along with the push command:
 
-```
+```bash
 $ git push --set-upstream origin main
 
 // Shorter flag
