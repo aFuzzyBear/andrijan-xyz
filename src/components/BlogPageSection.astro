@@ -8,12 +8,12 @@ import BlogCard from "./BlogCard.astro";
 
 <section class="py-4">
     <div class="w-11/12 mx-auto">
-        <h2 class="text-4xl font-semibold mb-7">Blog</h2>
+        <h2 class="text-5xl font-semibold mb-8">Blog</h2>
 
         <div class="flex flex-col gap-y-8 md:grid md:grid-cols-2 gap-x-8">
             {
-                sortedPosts.slice(0, 4).map(post => (
-                     <BlogCard blogTitle={post.frontmatter.title} blogDate={post.frontmatter.date} blogThumbnail={post.frontmatter.imageThumbnail} blogLink={post.url} blogGithub={posts[0].frontmatter.gitLink} />
+                sortedPosts.map(post => (
+                     <BlogCard blogTitle={post.frontmatter.title} blogDate={post.frontmatter.date} blogThumbnail={post.frontmatter.imageThumbnail} blogLink={post.url} />
                 ))
             }
         </div>

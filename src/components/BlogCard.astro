@@ -1,0 +1,14 @@
+---
+const {blogTitle, blogDate, blogThumbnail, blogLink} = Astro.props;
+---
+
+<div class="project-card bg-gray-100 rounded-md p-6">
+    <a href={blogLink}><h3 class="text-2xl font-medium">{blogTitle}</h3></a>
+    <p class="mb-4">{blogDate}</p>
+    <a href={blogLink}><img class="rounded-lg mb-5" src={blogThumbnail} alt="Garemotion Website"></a>
+
+
+    <div>
+        <a class="text-lg font-medium" href={blogLink}>Read more &rightarrow;</a>
+    </div>
+</div>
