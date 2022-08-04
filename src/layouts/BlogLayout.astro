@@ -44,6 +44,9 @@ const {content} = Astro.props;
 </html>
 
 <style lang="scss">
+    :global(html) {
+        scroll-padding: 20px;
+    }
     article :global(h2) {
      @apply text-3xl text-gray-900 font-bold my-4;
     }
