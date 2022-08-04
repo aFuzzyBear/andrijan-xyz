@@ -21,7 +21,7 @@ const {content} = Astro.props;
 <body>
     <Navbar />
     <section class="w-11/12 lg:w-8/12 mx-auto">
-        <h1 class="text-5xl text-gray-900 font-bold py-6">{content.title}</h1>
+        <h1 class="text-4xl lg:text-5xl text-gray-900 font-bold py-6">{content.title}</h1>
         <img src={content.imageThumbnail} alt={content.title} class="rounded-lg">
 
         <div class="flex justify-between mt-4">
@@ -32,7 +32,7 @@ const {content} = Astro.props;
 
             <div class="flex flex-col gap-y-2">
                 <p class="uppercase text-md font-bold">last updated</p>
-                <p class="text-lg">{content.date}</p>
+                <p class="text-lg">{content.dateUpdated}</p>
             </div>
         </div>
     </section>
@@ -49,7 +49,7 @@ const {content} = Astro.props;
     }
 
     article :global(h3) {
-        @apply text-2xl text-gray-900 font-bold my-2;
+        @apply text-xl text-gray-900 font-medium my-2;
     }
 
     article :global(h4) {
@@ -68,16 +68,19 @@ const {content} = Astro.props;
         @apply text-lg;
     }
 
+    article :global(li:not(:last-child)) {
+        @apply mb-1;
+    }
+
     article :global(a) {
         @apply text-gray-900;
     }
 
     article :global(pre) {
-        background-color: #f3f4f6 !important;
-        @apply p-4 my-3 rounded-lg;
+        @apply p-4 my-3 rounded-lg bg-gray-100;
     }
 
     article :global(code .line span) {
-        color: #111827 !important;
+        @apply text-gray-900;
     }
 </style>

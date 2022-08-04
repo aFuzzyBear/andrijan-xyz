@@ -1,15 +1,14 @@
 ---
-const {blogTitle, blogDate, blogThumbnail, blogLink, blogGitHub} = Astro.props;
+const {blogTitle, blogDate, blogThumbnail, blogLink} = Astro.props;
 ---
 
 <div class="project-card bg-gray-100 rounded-md p-6">
-    <a href=""><h3 class="text-2xl font-medium">{blogTitle}</h3></a>
-    <p class="mb-5">{blogDate}</p>
-    <a href="#"><img class="rounded-lg mb-5" src={blogThumbnail} alt="Garemotion Website"></a>
+    <a href={blogLink}><h3 class="text-2xl font-medium">{blogTitle}</h3></a>
+    <p class="mb-4">{blogDate}</p>
+    <a href={blogLink}><img class="rounded-lg mb-5" src={blogThumbnail} alt="Garemotion Website"></a>
 
 
-    <div class="flex justify-between">
+    <div>
         <a class="text-lg font-medium" href={blogLink}>Read more &rightarrow;</a>
-        <a href="#"><img src={blogGitHub} alt="GitHub Icon"></a>
     </div>
 </div>

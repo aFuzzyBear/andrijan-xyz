@@ -3,7 +3,9 @@ layout: "../../../layouts/BlogLayout.astro"
 title: Git Guide For Beginners
 author: Andrijan Tasevski
 imageThumbnail: "/blog-thumbnails/git-guide-thumbnail.png"
+gitLink: "https://github.com/andrijantasevski/andrijan-xyz/blob/19-create-blog-for-website/src/pages/blog/posts/git-guide.md"
 date: 03 Aug, 2022
+dateUpdated: 04 Aug, 2022
 ---
 
 ## Content
